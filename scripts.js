@@ -1,10 +1,16 @@
 function drawTree(x) {
-    for (i = 1; i <= x; i++) {
-        var star = '';
-        for ( j = 1; j <= i; j++ ) {
+    var star,
+        spaceBarKey;
+    for (var i = 1; i <= x; i++) {
+        star = '';
+        spaceBarKey = '';
+        for (var k = i; k < x; k++) {
+            spaceBarKey += ' ';
+        }
+        for (var j = 1; j < 2 * i; j++ ) {
             star += '*';
         }
-        console.log(star);
+    console.log(spaceBarKey + star);
     }
 }
-(drawTree(5));
+drawTree(8);
